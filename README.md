@@ -7,6 +7,10 @@ Esta aplicación es un ejemplo de uso de **React Native** con integración a la 
 ### 1. **Renombrar archivo `.env.template` a `.env`:**  
    En la raíz del proyecto, renombra el archivo `.env.template` a `.env` y asegúrate de que la variable `API_URL` y `API_KEY` esté configurada correctamente:
 
+   - API_URL: en enlace debe ser escrito de esta manera  `https://api.cmfchile.cl/api-sbifv3/recursos_api` 
+   - API_KEY: escribir la key entregada por cmfchile
+
+
    Ejemplo:
 
    ```plaintext
