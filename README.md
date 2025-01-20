@@ -51,7 +51,7 @@ Esta aplicación es un ejemplo de uso de **React Native** con integración a la 
 
    ![Imagen 1](./assets/images/image1.png)
 
-2. **Pantalla de detalle de valores:**  
+2. **Pantalla de listado de valores:**  
    Muestra los datos de los últimos 30 días para Dólar, Euro y UF, y del año actual para IPC y UTM al seleccionar un indicador de la pantalla principal.
 
    ![Imagen 2](./assets/images/image2.png)
