@@ -1,79 +1,82 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# **3IT Prueba Técnica | React Native Indicadores App**
 
-# Getting Started
+Esta aplicación es un ejemplo de uso de **React Native** con integración a la API de **CMF Bancos**. La cual permite visualizar el detalle de los datos actuales e históricos de cada indicador financiero.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## **Configuración Inicial**
 
-## Step 1: Start the Metro Server
+### 1. **Renombrar archivo `.env.template` a `.env`:**  
+   En la raíz del proyecto, renombra el archivo `.env.template` a `.env` y asegúrate de que la variable `API_URL` y `API_KEY` esté configurada correctamente:
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+   Ejemplo:
 
-To start Metro, run the following command from the _root_ of your React Native project:
+   ```plaintext
+   API_URL=https://api.cmfchile.cl/api-sbifv3/recursos_api
+   API_KEY=123456
+   ```
 
-```bash
-# using npm
-npm start
+   
 
-# OR using Yarn
-yarn start
-```
+### 2. **Instalar dependencias:**  
+   Ejecuta el siguiente comando en la raíz del proyecto para instalar las dependencias de **Node.js**:
 
-## Step 2: Start your Application
+   ```bash
+   npm install
+   ```
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+### 3. **Instalar dependencias de iOS (si trabajas en iOS):**  
+   Si estás trabajando con **iOS**, navega a la carpeta `ios` y ejecuta el siguiente comando para instalar las dependencias de **CocoaPods**:
 
-### For Android
+   ```bash
+   cd ios
+   pod install
+   cd ..
+   ```
 
-```bash
-# using npm
-npm run android
+### 4. **Ejecutar la aplicación:**  
+   Inicia el servidor de desarrollo y los simuladores ejecutando:
 
-# OR using Yarn
-yarn android
-```
+   ```bash
+   npm start
+   ```
 
-### For iOS
+### **Descripción de la aplicación:**
 
-```bash
-# using npm
-npm run ios
+1. **Pantalla principal:**  
+   Listado de indicadores que devuelve la API. Este listado es estático y muestra las siguientes opciones:  
+   - Dólar  
+   - Euro  
+   - IPC  
+   - UF  
+   - UTM  
 
-# OR using Yarn
-yarn ios
-```
+   ![Imagen 1](./assets/images/image1.png)
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+2. **Pantalla de detalle de valores:**  
+   Muestra los datos de los últimos 30 días para Dólar, Euro y UF, y del año actual para IPC y UTM al seleccionar un indicador de la pantalla principal.
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+   ![Imagen 2](./assets/images/image2.png)
 
-## Step 3: Modifying your App
+3. **Pantalla de detalle de un indicador en particular:**  
+   Muestra el detalle del valor más actual para cada indicador. Ademas muestra un Gráfico con los valores de los últimos 10 días para Dólar, Euro y UF, y de los últimos 12 meses para IPC y UTM. También muestra el valor más actual del indicador.
 
-Now that you have successfully run the app, let's modify it.
+   ![Imagen 3](./assets/images/image3.png)
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+### **Librerías utilizadas:**
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+- **dotenv:** Manejo de variables de entorno de manera segura.  
+- **react-native-paper:** Implementación de Material Design para componentes visuales.  
+- **react-navigation:** Navegación entre pantallas dentro de la aplicación.  
+- **react-native-chart-kit:** Biblioteca para crear gráficos en aplicaciones React Native.  
+- **react-native-vector-icons:** Conjunto de iconos personalizables para React Native.  
+- **axios:** Cliente HTTP para realizar solicitudes a la API.  
 
-## Congratulations! :tada:
+### **Hooks utilizados:**
 
-You've successfully run and modified your React Native App. :partying_face:
+- **useState**
+- **useEffect**
+- **useRef**
 
-### Now what?
+### **Custom Hooks utilizados:**
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+- **useAnimation**
+- **useIndicator**
