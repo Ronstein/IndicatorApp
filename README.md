@@ -15,7 +15,7 @@ Esta aplicación es un ejemplo de uso de **React Native** con integración a la 
 
    ```plaintext
    API_URL=https://api.cmfchile.cl/api-sbifv3/recursos_api
-   API_KEY=123456
+   API_KEY=abcd123456
    ```
 
    
@@ -82,5 +82,4 @@ Esta aplicación es un ejemplo de uso de **React Native** con integración a la 
 
 ### **Custom Hooks utilizados:**
 
-- **useAnimation**
 - **useIndicator**
